@@ -7,19 +7,26 @@ cr = ''
 for i in s :
     c+=chr(ord(i)+inc)
     inc+=1
-print(c)
+print("Your message is now : ",c)
 
 key=int(input("Enter Key to view to message : "))
-while(key!=k):
-    key=int(input("Incorrect key...\nRe-Enter your key : "))
-    if key == k :
-        for i in c :
-            cr+=chr(ord(i)-cni)
-            cni+=1
-        print("The message was : ",cr)
-
 if key==k:
-    for i in c:
+    for i in c :
         cr+=chr(ord(i)-cni)
         cni+=1
     print("The message was : ",cr)
+else:
+    while key!=k:
+        key=int(input("Incorrect key...\nRe-Enter your key : "))
+        if key == k :
+            for i in c :
+                cr+=chr(ord(i)-cni)
+                cni+=1
+            print("The message was : ",cr)
+
+
+#if key==k:
+#    for i in c:
+#        cr+=chr(ord(i)-cni)
+#        cni+=1
+#    print("The message was : ",cr)
